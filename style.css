@@ -5,8 +5,8 @@ body {
 }
 
 #grid-container {
-    height: 100vh;
-    width: 100vw;
+    height: 200vh;
+    width: 200vw;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
