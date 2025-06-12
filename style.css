@@ -1,32 +1,22 @@
-/* Stile di base per la pagina */
 body {
-    margin: 0; /* Rimuove i margini bianchi attorno alla pagina */
-    background-color: #111; /* Sfondo scuro per un'atmosfera zen */
-    overflow: hidden; /* Nasconde le scrollbar se il contenuto dovesse sbordare */
+    margin: 0;
+    background-color: #111;
+    overflow: hidden;
 }
 
-/* Il contenitore principale della nostra griglia */
 #grid-container {
-    height: 100vh; /* Altezza pari al 100% dell'altezza della finestra */
-    width: 100vw; /* Larghezza pari al 100% della larghezza della finestra */
-    display: grid; /* La magia inizia qui! Dichiariamo che questo è un contenitore grid */
-
-    /* Definiamo le colonne e le righe della griglia */
-    /* 'repeat' è una scorciatoia. 'auto-fit' crea quante colonne possono starci */
-    /* 'minmax(50px, 1fr)' dice che ogni colonna deve essere almeno 50px e al massimo una frazione uguale dello spazio */
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
 }
 
-/* Lo stile per ogni singolo quadrato che creeremo */
 .grid-item {
-    background-color: #333; /* Un colore grigio scuro per ora */
-    border: 1px solid #111; /* Un piccolo bordo dello stesso colore dello sfondo per separarli */
+    border: 1px solid #111;
     
-    /* Aggiungiamo una transizione per l'opacità. Questo è il cuore dell'animazione di dissolvenza! */
-    /* Durerà 1.5 secondi con un andamento dolce (ease-in-out) */
-    transition: opacity 1.5s ease-in-out; 
-    
-    /* All'inizio, ogni quadrato sarà invisibile */
-    opacity: 0; 
+    /* *** MODIFICA FONDAMENTALE QUI *** */
+    /* Abbiamo allungato la durata a 1.2 secondi e aggiunto 'background-color'. */
+    /* Ora sia l'opacità che il colore cambieranno con una dissolvenza morbida. */
+    transition: opacity 1.2s ease-in-out, background-color 1.2s ease-in-out;
 }
